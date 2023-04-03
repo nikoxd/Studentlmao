@@ -1,0 +1,38 @@
+
+package mypackage.com.studenttest;
+
+import java.util.Scanner;
+
+public class StudentTest {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter your name:");
+        String name = input.nextLine();
+        
+        System.out.println("Enter your ID:");
+        int id = input.nextInt();
+        
+        System.out.println("Enter your Gender(M for male / F for female):");
+        char gender = input.nextLine().charAt(0);       
+        
+        System.out.println("Enter your Address:");
+        String address = input.nextLine();
+        
+        Student s = new Student(name, id, gender, address);
+        
+        s.setID(92102);
+        
+        System.out.println(s.getName());
+        
+        s.formatName();
+        System.out.println("After formating the name:");
+       System.out.println(getName());
+        
+        s.printDescription();
+        
+        System.out.println(s.getGender() == 'M' ? "Male" : "Female");
+        
+        input.close();
+    }
+}
