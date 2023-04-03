@@ -1,0 +1,74 @@
+
+package mypackage.com.studenttest;
+
+
+public class Student {
+    private String name;
+    private int id;
+    private char gender;
+    private String address;
+    
+    
+    public Student(String name, int id, char gender, String address)
+    {
+        this.name = name;
+        this.id = id;
+        this.gender = gender;
+        this.address = address;
+    }
+    
+    public String getName(){
+        return name;
+    }
+    
+    public int getID()
+    {
+        return id;
+    }
+    
+    public char getGender(){
+        return gender;
+    }
+    
+    public String getAddress(){
+        return address;
+    }
+    
+    public void setName()
+    {
+        this.name = name;
+    }
+    
+    public void setID(){
+        this.id = id;
+    }
+    
+    public void setGender(){
+        
+        this.gender = gender;
+    }
+    
+    public void setAddress(){
+        this.address = address;
+        
+    }
+    
+    public void formatName() {
+        String[] words = name.split(" ");
+        StringBuilder sb = new StringBuilder();
+        for (String word : words) {
+            if (!word.isEmpty()) {
+                sb.append(Character.toUpperCase(word.charAt(0))).append(word.substring(1)).append(" ");
+            }
+        }
+        name = sb.toString().trim();
+    }
+
+    public void printDescription(){
+        System.out.print("Name: " +name);
+        System.out.println("ID: " +id);
+        System.out.println("Address: " +address);
+        System.out.println("Gender: " +gender);
+    }
+
+}
